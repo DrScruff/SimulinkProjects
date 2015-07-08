@@ -1,4 +1,5 @@
 % Initialise Telescope Variables
+% Add some text
 
 Body.Tube.Length     = 1320;     % mm
 Body.Tube.InnerRadius= 125;      % mm
@@ -40,3 +41,19 @@ Body.Shaft.Right.ZOffset = 430; % mm
 Body.Shaft.Right.Translation =  [Body.Shaft.Right.XOffset ...
                                 Body.Shaft.Right.YOffset ...
                                 Body.Shaft.Right.ZOffset];
+                            
+Base.Cradle.Radius = 250; % mm
+Base.Cradle.Depth = 25; % mm
+
+Base.Plate.Radius = 400; % mm
+Base.Plate.Depth = 25; % mm
+
+Base.Cradle.Height = 550; % mm
+Base.Cradle.Width = 300; % mm
+Base.Cradle.Top = 50; % mm
+Base.Cradle.Thickness = 25; % mm
+Base.Cradle.SideOffset = Body.Tube.InnerRadius + Body.Tube.Thickness + 10;
+Base.Cradle.XSection = [Base.Cradle.Width/2 0; ...
+                        Base.Cradle.Top/2, Base.Cradle.Height; ...
+                        Base.Cradle.Top/-2, Base.Cradle.Height; ...
+                        Base.Cradle.Width/-2 0];
